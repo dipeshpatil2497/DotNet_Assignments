@@ -66,7 +66,7 @@ namespace Assig1Soln
             empNo = count;
         }
 
-        public Employee(string name="" , decimal basicSalary=0.0M, short deptNo=0)
+        public Employee(string name="Noname" , decimal basicSalary=10000M, short deptNo=10)
         {
             Name = name;
             BasicSalary = basicSalary;
