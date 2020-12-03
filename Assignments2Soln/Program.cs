@@ -13,10 +13,10 @@ namespace Assignment2Soln
             Employee ep = new Manager();
             ep.Display();
 
-            Manager ep1 = new Manager("Dipesh", 10, 50000, "Kharghar");
+            Manager ep1 = new Manager("Dipesh", 10, 50000);
             ep1.Display();
 
-            GeneralManager ep2 = new GeneralManager("Vipul", 12, 45000, "Chinchwad");
+            GeneralManager ep2 = new GeneralManager("Vipul", 12, 45000);
             ep2.Display();
 
             CEO ep3 = new CEO("DipeshP", 15, 100000);
@@ -97,27 +97,27 @@ namespace Assignment2Soln
 
     public class Manager : Employee
     {
-        private string destination;
+        private string designation;
 
         public Manager()
         {
             Console.WriteLine("no para Manager construct......");
         }
-        public Manager(string name, short deptno,decimal basic=15000, string destination="none") : base(name,deptno)
+        public Manager(string name, short deptno,decimal basic=15000, string designation="none") : base(name,deptno)
         {
             Basic = basic;
-            Destination = destination ;
+            Designation = designation ;
         }
-        public string Destination
+        public string Designation
         {
             set 
             {
                 if (value != "")
-                    destination = value;
+                    designation = value;
                 else
                     Console.WriteLine("Destination can't be blank");
             }
-            get { return destination; }
+            get { return designation; }
         }
 
         public override decimal Basic
@@ -148,7 +148,7 @@ namespace Assignment2Soln
             + "\nempName : " + Name
             + "\ndept no : " + DeptNo
             + "\nbasic : " + Basic
-            +"\nDestination : "+ Destination);
+            +"\nDesignation : "+ Designation);
         }
     }
 
@@ -170,7 +170,7 @@ namespace Assignment2Soln
             + "\nempName : " + Name
             + "\ndept no : " + DeptNo
             + "\nbasic : " + Basic
-            + "\nDestination : " + Destination
+            + "\nDesignation : " + Designation
             + "\nPerks : "+ Perks);
         }
 
